@@ -1,15 +1,15 @@
 package main
 
 import (
-	"net/http"
+	"github.com/ghutch55/crashpad-backend/handlers"
 
 	"github.com/labstack/echo/v4"
 )
 
 func main() {
 	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "CrashPad backend is up!")
-	})
+
+	e.POST("/bugs", handlers.CreateBug)
+
 	e.Logger.Fatal(e.Start(":8080"))
 }
