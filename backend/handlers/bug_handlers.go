@@ -23,3 +23,7 @@ func CreateBug(c echo.Context) error {
 
 	return c.JSON(http.StatusCreated, bug)
 }
+
+func GetBugs(c echo.Context) error {
+	return c.JSON(http.StatusOK, BugList)
+}

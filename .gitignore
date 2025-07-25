@@ -18,6 +18,7 @@ pnpm-debug.log*
 # --- Env Variables ---
 *.env
 *.env.*        # includes .env.local, .env.development, etc
+frontend/.env.*
 
 # --- macOS / Linux / Windows ---
 .DS_Store
